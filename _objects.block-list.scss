@@ -1,0 +1,70 @@
+/*------------------------------------*\
+    #BLOCK-LIST
+\*------------------------------------*/
+
+/**
+ * The block list object creates blocky list items out of a `ul` or `ol`.
+ */
+
+// Predefine the variables below in order to alter and enable specific features.
+$inuit-block-list-padding:          $inuit-base-spacing-unit !default;
+$inuit-block-list-padding--small:   halve($inuit-block-list-padding) !default;
+$inuit-block-list-padding--large:   double($inuit-block-list-padding) !default;
+
+$inuit-enable-block-list--small:    false !default;
+$inuit-enable-block-list--large:    false !default;
+
+.#{$inuit-namespace}block-list,
+%#{$inuit-namespace}block-list {
+    margin-left: 0;
+    list-style: none;
+}
+
+    .#{$inuit-namespace}block-list__item,
+    %#{$inuit-namespace}block-list__item {
+        padding: $inuit-block-list-padding;
+    }
+
+
+
+
+
+@if ($inuit-enable-block-list--small == true) {
+
+    /**
+     * Small block-lists.
+     */
+
+    .#{$inuit-namespace}block-list--small,
+    %#{$inuit-namespace}block-list--small {
+
+        > .#{$inuit-namespace}block-list__item,
+        > %#{$inuit-namespace}block-list__item {
+            padding: $inuit-block-list-padding--small;
+        }
+
+    }
+
+}
+
+
+
+
+
+@if ($inuit-enable-block-list--large == true) {
+
+    /**
+     * Large block-lists.
+     */
+
+    .#{$inuit-namespace}block-list--large,
+    %#{$inuit-namespace}block-list--large {
+
+        > .#{$inuit-namespace}block-list__item,
+        > %#{$inuit-namespace}block-list__item {
+            padding: $inuit-block-list-padding--large;
+        }
+
+    }
+
+}

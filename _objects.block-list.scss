@@ -19,6 +19,11 @@ $inuit-enable-block-list--large:    false !default;
     margin:  0;
     padding: 0;
     list-style: none;
+
+    > li {
+        @extend %#{$inuit-namespace}block-list__item;
+    }
+
 }
 
     .#{$inuit-namespace}block-list__item,

@@ -13,6 +13,8 @@ $inuit-block-list-padding--large:   double($inuit-block-list-padding) !default;
 
 $inuit-enable-block-list--small:    false !default;
 $inuit-enable-block-list--large:    false !default;
+$enable-block-list--responsive:     false !default;
+$block-list-collapse-at:            720px !default;
 
 .#{$inuit-namespace}block-list,
 %#{$inuit-namespace}block-list {
@@ -30,9 +32,6 @@ $inuit-enable-block-list--large:    false !default;
     %#{$inuit-namespace}block-list__item {
         padding: $inuit-block-list-padding;
     }
-
-
-
 
 
 @if ($inuit-enable-block-list--small == true) {
@@ -54,9 +53,6 @@ $inuit-enable-block-list--large:    false !default;
 }
 
 
-
-
-
 @if ($inuit-enable-block-list--large == true) {
 
     /**
@@ -73,4 +69,56 @@ $inuit-enable-block-list--large:    false !default;
 
     }
 
+}
+
+
+@if ($enable-block-list--responsive == true){
+
+    /**
+     * Responsive block-list, decreasing its padding at the breakpoint
+     */
+    @media screen and (max-width: $block-list-collapse-at){
+
+        .#{$inuit-namespace}block-list--responsive,
+        %#{$inuit-namespace}block-list--responsive{
+
+            .#{$inuit-namespace}block-list__item,
+            %#{$inuit-namespace}block-list__item,
+            > li{
+                padding: halve($inuit-block-list-padding);
+            }
+
+            @if ($inuit-enable-block-list--small == true){
+
+                /**
+                 * Small block-list at the breakpoint
+                 */
+                &.#{$inuit-namespace}block-list--small,
+                &%#{$inuit-namespace}block-list--small{
+
+                    .#{$inuit-namespace}block-list__item,
+                    %#{$inuit-namespace}block-list__item,
+                    > li{
+                        padding: halve($inuit-block-list-padding--small);
+                    }
+                }
+            }
+
+            @if ($inuit-enable-block-list--large == true){
+
+                /**
+                 * Large block-list at the breakpoint
+                 */
+                &.#{$inuit-namespace}block-list--large,
+                &%#{$inuit-namespace}block-list--large{
+
+                    .#{$inuit-namespace}block-list__item,
+                    %#{$inuit-namespace}block-list__item,
+                    > li{
+                        padding: halve($inuit-block-list-padding--large);
+                    }
+                }
+            }
+        }
+    }
 }

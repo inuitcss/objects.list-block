@@ -7,14 +7,14 @@
  */
 
 // Predefine the variables below in order to alter and enable specific features.
-$inuit-block-list-padding:          $inuit-base-spacing-unit !default;
-$inuit-block-list-padding--small:   halve($inuit-block-list-padding) !default;
-$inuit-block-list-padding--large:   double($inuit-block-list-padding) !default;
+$inuit-block-list-padding:              $inuit-base-spacing-unit !default;
+$inuit-block-list-padding--small:       halve($inuit-block-list-padding) !default;
+$inuit-block-list-padding--large:       double($inuit-block-list-padding) !default;
 
-$inuit-enable-block-list--small:    false !default;
-$inuit-enable-block-list--large:    false !default;
-$enable-block-list--responsive:     false !default;
-$block-list-collapse-at:            720px !default;
+$inuit-enable-block-list--small:        false !default;
+$inuit-enable-block-list--large:        false !default;
+$inuit-enable-block-list--responsive:   false !default;
+$inuit-block-list-collapse-at:          720px !default;
 
 .#{$inuit-namespace}block-list,
 %#{$inuit-namespace}block-list {
@@ -72,7 +72,7 @@ $block-list-collapse-at:            720px !default;
 }
 
 
-@if ($enable-block-list--responsive == true){
+@if ($inuit-enable-block-list--responsive == true){
 
     /**
      * Responsive block-list, decreasing its padding at the breakpoint

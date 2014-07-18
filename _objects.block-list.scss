@@ -7,6 +7,8 @@
  */
 
 // Predefine the variables below in order to alter and enable specific features.
+$inuit-block-list-namespace:        $inuit-namespace !default;
+
 $inuit-block-list-padding:          $inuit-base-spacing-unit !default;
 $inuit-block-list-padding--small:   halve($inuit-block-list-padding) !default;
 $inuit-block-list-padding--large:   double($inuit-block-list-padding) !default;
@@ -14,20 +16,20 @@ $inuit-block-list-padding--large:   double($inuit-block-list-padding) !default;
 $inuit-enable-block-list--small:    false !default;
 $inuit-enable-block-list--large:    false !default;
 
-.#{$inuit-namespace}block-list,
-%#{$inuit-namespace}block-list {
+.#{$inuit-block-list-namespace}block-list,
+%#{$inuit-block-list-namespace}block-list {
     margin:  0;
     padding: 0;
     list-style: none;
 
     > li {
-        @extend %#{$inuit-namespace}block-list__item;
+        @extend %#{$inuit-block-list-namespace}block-list__item;
     }
 
 }
 
-    .#{$inuit-namespace}block-list__item,
-    %#{$inuit-namespace}block-list__item {
+    .#{$inuit-block-list-namespace}block-list__item,
+    %#{$inuit-block-list-namespace}block-list__item {
         padding: $inuit-block-list-padding;
     }
 
@@ -41,11 +43,11 @@ $inuit-enable-block-list--large:    false !default;
      * Small block-lists.
      */
 
-    .#{$inuit-namespace}block-list--small,
-    %#{$inuit-namespace}block-list--small {
+    .#{$inuit-block-list-namespace}block-list--small,
+    %#{$inuit-block-list-namespace}block-list--small {
 
-        > .#{$inuit-namespace}block-list__item,
-        > %#{$inuit-namespace}block-list__item {
+        > .#{$inuit-block-list-namespace}block-list__item,
+        > %#{$inuit-block-list-namespace}block-list__item {
             padding: $inuit-block-list-padding--small;
         }
 
@@ -63,11 +65,11 @@ $inuit-enable-block-list--large:    false !default;
      * Large block-lists.
      */
 
-    .#{$inuit-namespace}block-list--large,
-    %#{$inuit-namespace}block-list--large {
+    .#{$inuit-block-list-namespace}block-list--large,
+    %#{$inuit-block-list-namespace}block-list--large {
 
-        > .#{$inuit-namespace}block-list__item,
-        > %#{$inuit-namespace}block-list__item {
+        > .#{$inuit-block-list-namespace}block-list__item,
+        > %#{$inuit-block-list-namespace}block-list__item {
             padding: $inuit-block-list-padding--large;
         }
 

@@ -1,7 +1,7 @@
-# The block-list object
+# The list-block object
 
-The `block-list` object simply creates blocky lists from `ul`s or `ol`s.
+The `list-block` object simply creates blocky lists from `ul`s or `ol`s.
 
 Install using Bower:
 
-    $ bower install --save inuit-block-list
+    $ bower install --save inuit-list-block

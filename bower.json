@@ -1,18 +1,18 @@
 {
-  "name": "inuit-block-list",
-  "version": "0.3.1",
+  "name": "inuit-list-block",
+  "version": "0.4.0",
   "authors": [
     "Harry Roberts <harry@csswizardry.com>"
   ],
   "description": "A simple blocky-list object for the inuitcss framework",
-  "main": "_objects.block-list.scss",
+  "main": "_objects.list-block.scss",
   "keywords": [
     "inuitcss",
     "oocss",
     "css"
   ],
   "license": "Apache",
-  "homepage": "https://github.com/inuitcss/objects.block-list",
+  "homepage": "https://github.com/inuitcss/objects.list-block",
   "dependencies": {
     "inuit-defaults": "~0.2.0",
     "inuit-functions": "~0.2.0"

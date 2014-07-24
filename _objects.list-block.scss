@@ -10,11 +10,15 @@
 $inuit-list-block-namespace:        $inuit-namespace !default;
 
 $inuit-list-block-padding:          $inuit-base-spacing-unit !default;
-$inuit-list-block-padding--small:   halve($inuit-list-block-padding) !default;
-$inuit-list-block-padding--large:   double($inuit-list-block-padding) !default;
+$inuit-list-block-padding--tiny:      quarter($inuit-list-block-padding) !default;
+$inuit-list-block-padding--small:       halve($inuit-list-block-padding) !default;
+$inuit-list-block-padding--large:      double($inuit-list-block-padding) !default;
+$inuit-list-block-padding--huge:    quadruple($inuit-list-block-padding) !default;
 
+$inuit-enable-list-block--tiny:     false !default;
 $inuit-enable-list-block--small:    false !default;
 $inuit-enable-list-block--large:    false !default;
+$inuit-enable-list-block--huge:     false !default;
 
 .#{$inuit-list-block-namespace}list-block,
 %#{$inuit-list-block-namespace}list-block {
@@ -37,6 +41,24 @@ $inuit-enable-list-block--large:    false !default;
 
 
 
+@if ($inuit-enable-list-block--tiny == true) {
+
+    /**
+     * Tiny list-blocks.
+     */
+
+    .#{$inuit-list-block-namespace}list-block--tiny,
+    %#{$inuit-list-block-namespace}list-block--tiny {
+
+        > .#{$inuit-list-block-namespace}list-block__item,
+        > %#{$inuit-list-block-namespace}list-block__item {
+            padding: $inuit-list-block-padding--tiny;
+        }
+
+    }
+
+}
+
 @if ($inuit-enable-list-block--small == true) {
 
     /**
@@ -55,10 +77,6 @@ $inuit-enable-list-block--large:    false !default;
 
 }
 
-
-
-
-
 @if ($inuit-enable-list-block--large == true) {
 
     /**
@@ -71,6 +89,24 @@ $inuit-enable-list-block--large:    false !default;
         > .#{$inuit-list-block-namespace}list-block__item,
         > %#{$inuit-list-block-namespace}list-block__item {
             padding: $inuit-list-block-padding--large;
+        }
+
+    }
+
+}
+
+@if ($inuit-enable-list-block--huge == true) {
+
+    /**
+     * Huge list-blocks.
+     */
+
+    .#{$inuit-list-block-namespace}list-block--huge,
+    %#{$inuit-list-block-namespace}list-block--huge {
+
+        > .#{$inuit-list-block-namespace}list-block__item,
+        > %#{$inuit-list-block-namespace}list-block__item {
+            padding: $inuit-list-block-padding--huge;
         }
 
     }

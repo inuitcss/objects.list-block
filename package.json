@@ -1,6 +1,6 @@
 {
   "name": "inuit-list-block",
-  "version": "0.4.2",
+  "version": "0.5.0",
   "description": "A simple blocky-list object for the inuitcss framework",
   "main": "_objects.list-block.scss",
   "repository": {
